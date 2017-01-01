@@ -8,7 +8,14 @@ import {
 
 
 const styles = StyleSheet.create({
-  image: { height: 250, alignSelf: 'stretch' },
+  image: {
+    height: 250,
+    alignSelf: 'stretch',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+  },
 });
 
 export default class Header extends Component {
@@ -36,7 +43,9 @@ export default class Header extends Component {
         source={{ uri: this.state.headerImage }}
       >
         <NavigationBar
-          centerComponent={<Title>TITLE</Title>}
+          centerComponent={
+            <Title>TITLE</Title>
+          }
         />
       </Image>
     );

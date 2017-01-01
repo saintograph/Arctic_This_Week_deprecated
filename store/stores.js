@@ -11,7 +11,6 @@ class NewsStore {
     this.getNews = action(function getNews() {
       axios.get('http://app.thearcticinstitute.org/wp-json/wp/v2/posts?per_page=5')
       .then((response) => {
-        console.log(response.data[0].plaintext);
         this.allNews = response.data;
       });
     });
